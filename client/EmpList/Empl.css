@@ -1,0 +1,66 @@
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: darkolivegreen;
+    color: white;
+}
+
+thead tr th{
+    padding: 20px;
+}
+/* Style the create employee button */
+.buttondiv {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+tbody{
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody tr td{
+    padding: 18px;
+}
+
+.profileimg{
+    width:40px;
+    height: 40px;
+}
+
+.editBtn{
+padding: 4px;
+background-color: rgba(4, 70, 4, 0.753);
+color: white;
+font-weight:400;
+}
+
+.deleteBtn{
+    padding: 4px;
+background-color: rgb(192, 9, 9);
+color: white;
+font-weight:400;
+}
+
+.serchInp{
+    width: 20rem;
+height: 26px;
+}
+
+.createEmpBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px ;
+}
+
+.createEmpBtn:hover {
+    background-color: #0056b3;
+}

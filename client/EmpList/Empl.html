@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="../Dashbord/Home.styles.css">
+    <link rel="stylesheet" href="Empl.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../Dashbord/Home.html">Home</a></li>
+                <li><a href="../EmpList/Empl.html">Employee List</a></li>
+            </ul>
+            <ul>
+                <li >Username: <b><span class="username"></span></b></li>
+                <li><button id="logoutbtn">Logout</button></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="buttondiv">
+                    <input class="serchInp" type="text" placeholder="Search">
+                <button class="createEmpBtn">Create Employee</button>
+            </div>
+            <div>
+                <table>
+                <thead>
+                    <tr>
+                        <th>U.Id</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>MobileNo</th>
+                        <th>Designation</th>
+                        <th>Gender</th>
+                        <th>Course</th>
+                        <th>CreateDate</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Empl.js"></script>
+    <script src="../Dashbord/Home.script.js"></script>
+</body>
+</html>

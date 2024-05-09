@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Dashbord/Home.styles.css">
+    <link rel="stylesheet" href="EditEmp.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../Dashbord/Home.html">Home</a></li>
+                <li><a href="../EmpList/Empl.html">Employee List</a></li>
+            </ul>
+            <ul>
+                <li >Username: <b><span class="username"></span></b></li>
+                <li><button id="logoutbtn">Logout</button></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form id="editform" enctype="multipart/form-data" autocomplete="off" >
+            <div>
+                <label>Name</label>
+                <input class="name" type="text" name="name" placeholder="Enter name" >
+            </div>
+            <div>
+                <label>Email</label>
+                <input class="email" type="email" name="email" placeholder="Enter email" >
+            </div>
+            <div>
+                <label>MobileNo</label>
+                <input class="mobileno" type="text" name="mobileno" placeholder="Enter MobileNo">
+            </div>
+            <div>
+                <label>Designation</label>
+                <select class="designation" name="designation">
+                    <option value="">Select Designation</option>
+                    <option value="Hr">HR</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Sales">Sales</option>
+                </select>
+            </div>
+            <div>
+                <label>Gender</label>
+               <label><input class="gender" type="radio" name="gender" value="male">Male</label> 
+               <label ><input class="gender" type="radio" name="gender" value="female" >Female</label> 
+            </div>
+            <div>
+                <label>Course</label>
+                <input class="course" type="checkbox" name="course" value="MCA" >MCA
+                <input class="course" type="checkbox" name="course" value="BCA" >BCA
+                <input class="course" type="checkbox" name="course" value="BSC" >BSC
+            </div>
+            <div>
+                <label for="image">Image Upload</label>
+                <input class="image" type="file" id="image" name="image" accept=".jpg,.png">
+                <img class="profile-image" src="" alt="Profile Image" width="60" height="60">
+            </div>
+            <button type="submit" id="submitBtn">Update</button>
+        </form>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="EditEmp.js"></script>
+    <script src="../Dashbord/Home.script.js"></script>
+</body>
+</html>
