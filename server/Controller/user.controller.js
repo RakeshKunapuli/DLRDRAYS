@@ -5,6 +5,8 @@ module.exports.submitForm = async (req, res) => {
   try {
     const { name, email, mobileno, designation, gender, course } = req.body;
     const image = req.file.filename;
+    console.log(name, email, mobileno, designation, gender, course)
+    console.log(image)
 
     if (!name || !email || !designation || !gender || !course || !image) {
       return res.status(400).json({

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var employeeForm = document.getElementById('employeeForm'); 
-    employeeForm.addEventListener('submit', async function(event) {
+    var employeeForm = document.getElementById('employeeForm'); // corrected from 'submitBtn' to 'employeeForm'
+    employeeForm.addEventListener('submit', async function(event) { // changed event from 'click' to 'submit'
         event.preventDefault();  
         var name = document.querySelector('.name').value;
         var email = document.querySelector('.email').value;
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         var image = document.querySelector('.image').files[0];
 
+
         var formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
@@ -26,15 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (image) {
             formData.append('image', image)
         }
-
         try {
             const response = await fetch("http://localhost:8002/users/submit-form", {
                 method: "POST",
                 body: formData
             });
-            if (!response.ok) {
-                throw new Error('Failed to submit form');
-            }
+            const data = await response.json();
         }catch(err) {
             console.log("error",err);
         }
